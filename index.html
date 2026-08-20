@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlusFit</title>
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
@@ -14,9 +13,9 @@
     <header>
         <div class="logo">
             <span>PlusFit</span>
-            <!-- <img src="" alt="logo of PlusFit"> -->
+
         </div>
-        <nav>
+        <nav class="nav">
             <ul>
                 <li><a href="#Hero">Hero</a></li>
                 <li><a href="#Features">Features</a></li>
@@ -27,6 +26,7 @@
             </ul>
             <button>Shop</button>
         </nav>
+        <button class="hamborgar"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main>
         <section id="Hero">
@@ -46,28 +46,28 @@
             <h2>Smart features, every second</h2>
             <p class="p2">Built to track your health and keep you on time, wrapped in a design you'll love wearing.</p>
             <div class="cards">
-                <div class="card">
+                <div class="card reveal">
                     <div class="heart">
                         <i class="fa-regular fa-heart"></i>
                     </div>
                     <h3>Heart rate</h3>
                     <p>Continuous monitoring so you always know your pulse.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal">
                     <div class="blood">
                         <i class="fa-solid fa-heart-pulse"></i>
                     </div>
                     <h3>Blood pressure</h3>
                     <p>Track reading throughout the day, right from your wrist.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal">
                     <div class="alarm">
                         <i class="fa-regular fa-alarm-clock"></i>
                     </div>
                     <h3>Smart alarm</h3>
                     <p>Gentle wake-ups timed to your lightest sleep phase.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal">
                     <div class="wifi">
                         <i class="fa-solid fa-wifi"></i>
                     </div>
@@ -81,42 +81,42 @@
             <h3>Available in every mood</h3>
             <p class="p2">Same smartwatch, nine colorways to match your style.</p>
             <div class="all-colors">
-                <div class="watch-color-card1">
+                <div class="watch-color-card1 reveal">
                     <img src="img/white.png" alt="white watch">
                     <p>White Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card2">
+                <div class="watch-color-card2 reveal">
                     <img src="img/black.png" alt="black watch">
                     <p>Black Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card3">
+                <div class="watch-color-card3 reveal">
                     <img src="img/olive.png" alt="olive watch">
                     <p>Olive Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card4">
+                <div class="watch-color-card4 reveal">
                     <img src="img/gray.png" alt="gray watch">
                     <p>Gray Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card5">
+                <div class="watch-color-card5 reveal">
                     <img src="img/navy_blue_1.png" alt="navy-blue watch">
                     <p>Navy-blue Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card6">
+                <div class="watch-color-card6 reveal">
                     <img src="img/teal.png" alt="teal watch">
                     <p>Teal Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card7">
+                <div class="watch-color-card7 reveal">
                     <img src="img/red_1.png" alt="red watch">
                     <p>Red Color</p>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="watch-color-card8">
+                <div class="watch-color-card8 reveal">
                     <img src="img/brown_leather.png" alt="brown watch">
                     <p>Brown Color</p>
                     <i class="fa-solid fa-circle"></i>
@@ -167,7 +167,7 @@
             <h2>Pick your PlusFit</h2>
             <p class="p2">Simple pricing, no hidden fees. Every plan ships with a 2-year warranty.</p>
             <div class="price-cards">
-                <div class="price-card1">
+                <div class="price-card1 reveal">
                     <div class="price">
                         <p>ESSENTIAL</p>
                         <span>$129</span>
@@ -181,7 +181,7 @@
                     </ul>
                     <button>Choose plan</button>
                 </div>
-                <div class="price-card2">
+                <div class="price-card2 reveal">
                     <div class="price">
                         <p class="p2-card2">SMART</p>
                         <span class="span-1">$189</span>
@@ -196,7 +196,7 @@
                     </ul>
                     <button>Choose plan</button>
                 </div>
-                <div class="price-card1">
+                <div class="price-card1 reveal">
                     <div class="price">
                         <p>ELITE</p>
                         <span>$249</span>
@@ -245,20 +245,23 @@
                         <div class="social-bottom"><i class="fa-brands fa-tiktok"></i></div>
                     </div>
                 </div>
-                <div class="right-part">
-                    <label for="name">Full Name</label>
-                    <br>
-                    <input type="text" name="name" id="name" placeholder="Your name" required> <br>
-                    <label for="email">Email</label>
-                    <br>
-                    <input type="email" name="email" id="email" placeholder="you@gmail.com" required>
-                    <br>
-                    <label for="sub">Subject</label>
-                    <br>
-                    <input type="text" name="Subject" id="sub" placeholder="How can we help?"><br>
-                    <label for="mess">Message</label> <br>
-                    <textarea name="message" id="mess" placeholder="Tell us more..."></textarea>
-                    <button type="submit">Send Message</button>
+                <div class="right-part error">
+                    <form action="" class="contact-form">
+                        <label for="name">Full Name</label>
+                        <br>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                        <br>
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="you@gmail.com" required><br>
+                        <br>
+                        <label for="sub">Subject</label>
+                        <br>
+                        <input type="text" name="Subject" id="sub" placeholder="How can we help?"><br>
+                        <label for="mess">Message</label> <br>
+                        <textarea name="message" id="mess" placeholder="Tell us more..."></textarea><br>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -307,9 +310,7 @@
                 <p>Terms of Service</p>
             </div>
         </div>
-
     </footer>
     <script src="javascript/script.js"></script>
 </body>
-
 </html>
