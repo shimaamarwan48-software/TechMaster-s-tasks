@@ -32,7 +32,10 @@ header{
     font-size: xx-large;
     text-shadow: 10px 5px 10px var(--color3);
 }
-nav ul{
+.hamborgar{
+    display:none ;
+}
+.nav ul{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -52,23 +55,23 @@ header button:hover{
     background-color: var(--color4);
     transition-duration: .5s;
 }
-header nav{
+header .nav{
     display: flex;
     gap: 20px;
     align-items: center;
 }
-nav a{
+.nav a{
     text-decoration: none;
     color: var(--color4);
     font-size: large;
 }
-nav a:hover{
+.nav a:hover{
     text-shadow: 10px 10px 10px var(--color3);
     color:var(--color5) ;
     transition-duration: .5s;
 }
 #Hero{
-    height: 60vh;
+    min-height: 60vh;
     color: var(--color4);
     display: flex;
     justify-content: space-between;
@@ -135,7 +138,7 @@ nav a:hover{
 }
 .card{
     background-color: white;
-    height: 30vh;
+    min-height: 30vh;;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -304,7 +307,7 @@ nav a:hover{
 }
 .about-photo{
     width: 30%;
-    height: 40vh;
+    min-height: 40vh;;
     background-image: url(../img/image\ copy.png);
     background-position: top;
     background-repeat: no-repeat;
@@ -490,7 +493,7 @@ nav a:hover{
 }
 .left-part{
     width: 40%;
-    height: 50vh;
+    min-height: 50vh;;
     background-color: #2c2c2a;
     padding: 40px 20px;
     border-top-left-radius: 10px;
@@ -504,6 +507,9 @@ nav a:hover{
 .left-part p{
     margin-bottom: 30px;
     color:rgb(191, 185, 176) ;
+}
+.icons-tex span{
+     color:rgb(191, 185, 176) ;
 }
 .icons {
     display: flex;
@@ -546,7 +552,7 @@ nav a:hover{
 }
 .right-part{
     width: 40%;
-    height: 50vh;
+    min-height: 50vh;;
     background-color: white;
     padding: 40px 20px;
     border-top-right-radius: 10px;
@@ -585,7 +591,7 @@ footer{
     background-color: #2c2c2a;
     padding: 120px 90px;
     margin-top: 15px;
-    height: 60vh;
+    min-height: 60vh;;
 }
 .top-footer{
     display: flex;
@@ -666,5 +672,189 @@ footer{
 .footer-privacy{
     display: flex;
     gap: 10px;
+}
+.reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
 
+@media (min-width:901px){
+    #Hero, #Features, #Colors, #About, #Pricing, #Contact, footer{
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer{
+        max-width: none;
+    }
+    footer > *{
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards{
+        gap: 40px;
+    }
+    .hero-photo img{
+        max-width: 100%;
+    }
+}
+
+@media (max-width:900px){
+    .hamborgar{
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+        color: var(--color4);
+        cursor: pointer;
+    }
+    header{
+        position: relative;
+    }
+    header .nav{
+        display: none;
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        width: 100%;
+        background-color: var(--color10);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 15px;
+        z-index: 999;
+    }
+    header .nav.active{
+        display: flex;
+    }
+    .nav ul{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .logo{
+        width: auto;
+    }
+    #Hero{
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+        padding: 60px 25px;
+        gap: 30px;
+    }
+    .hero-text , .hero-photo{
+        width: 100%;
+    }
+    .hero-photo img{
+        width: 260px;
+        height: 260px;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        margin: 30px 15px 40px;
+    }
+    .heart , .blood , .alarm , .wifi{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .all-colors{
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+    }
+    .all-colors img{
+        width: 100%;
+        height: auto;
+        max-width: 220px;
+    }
+    #About{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .about-text , .about-photo{
+        width: 100%;
+    }
+    .about-photo{
+        min-height: 300px;
+        height: auto;
+        margin-top: 0;
+    }
+    .about-photo .square{
+        margin-top: 200px;
+        transform: translateX(40px);
+    }
+    .history-of-us{
+        gap: 15px;
+    }
+    .price-cards{
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+    .contact-div{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left-part , .right-part{
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        border-radius: 10px;
+    }
+    .left-part{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .right-part{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-top: 15px;
+    }
+    footer{
+        height: auto;
+        min-height: auto;
+        padding: 60px 25px;
+    }
+    .top-footer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-footer .colum{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .bottom-footer{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+@media (max-width:480px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .all-colors{
+        grid-template-columns: 1fr;
+    }
+    .hero-text h1{
+        font-size: 28px;
+    }
+    .hero-photo img{
+        width: 220px;
+        height: 220px;
+    }
+    .about-photo .square{
+        margin-top: 180px;
+        transform: translateX(0);
+        width: 70%;
+    }
 }
