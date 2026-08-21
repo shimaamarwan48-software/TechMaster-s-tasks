@@ -2,7 +2,7 @@
 
 A responsive landing page for a fictional smartwatch brand, built with vanilla HTML, CSS, and JavaScript as part of a front-end web development learning project.
 
-🔗 **Live Demo:** file:///C:/Users/WinDows/OneDrive/Desktop/Skills/Projects%20of%20front%20end/Watch%20Website/index.html
+🔗 **Live Demo:** [file:///C:/Users/WinDows/OneDrive/Desktop/Skills/Projects%20of%20front%20end/Watch%20Website/index.html](https://shimaamarwan48-software.github.io/TechMaster-s-tasks/)
 
 ## Features
 
@@ -11,7 +11,7 @@ A responsive landing page for a fictional smartwatch brand, built with vanilla H
 - **Smooth scrolling** — animated navigation between sections instead of instant jumps
 - **Scroll-triggered animations** — cards and content fade/slide into view as you scroll, using the Intersection Observer API
 - **Contact form validation** — checks required fields and email format before submission
-- **9 product colorways** displayed in an interactive grid
+- ** product colorways** displayed in an interactive grid
 - **3-tier pricing section** with a highlighted "most popular" plan
 
 ## Sections
